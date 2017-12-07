@@ -66,7 +66,6 @@ const styles = StyleSheet.create({
 	},
 
 	alertText: {
-		fontFamily: 'open-sans',
 		color: "#576068",
 	},
 
@@ -77,7 +76,6 @@ const styles = StyleSheet.create({
 	},
 
 	alertTime: {
-		fontFamily: 'open-sans',
 		color: "#576068",
 		fontSize: 11
 	}

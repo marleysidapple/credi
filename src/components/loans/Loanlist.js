@@ -88,7 +88,6 @@ const styles=StyleSheet.create({
 	},
 
 	loanTitle: {
-		fontFamily: FONT_NORMAL,
 		color: '#444445',
 		fontSize: 11,
 		paddingTop: 3,
@@ -96,7 +95,6 @@ const styles=StyleSheet.create({
 	},
 
 	amountDetail: {
-		fontFamily: 'open-sans-bold',
 		color: '#FF9F1C',
 		fontSize: 13,
 		paddingTop: 3,

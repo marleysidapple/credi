@@ -49,13 +49,12 @@ class Esign extends Component {
           		<View style={styles.signatureContainer}>
           				{this.signatureInstance()}
                      <View>
-                     	<Text style={{fontFamily: 'open-sans'}} onPress={() => this.props.navigation.navigate('Esign')}>Redraw</Text>
+                     	<Text onPress={() => this.props.navigation.navigate('Esign')}>Redraw</Text>
                      </View>
                 </View>
 
                 <View style={styles.stepAction}>
 					<Button
-					  fontFamily='open-sans'
 					  backgroundColor= '#25ADE4'
 					  onPress={() => this.props.navigation.navigate('Esign')}
 					  raised
@@ -71,7 +70,6 @@ class Esign extends Component {
 
 const styles = StyleSheet.create({
 	textHeader: {
-		fontFamily: 'open-sans-bold',
 		color: '#eee',
 		fontWeight: '500',
 		fontSize: 20,
@@ -95,7 +93,6 @@ const styles = StyleSheet.create({
 
 	esignInfo: {
 		textAlign: 'center',
-		fontFamily: 'open-sans',
 	},
 
 	stepAction: {

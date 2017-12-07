@@ -20,7 +20,7 @@ class Loandetail extends Component {
 			navigationOptions: {
 	          tabBarVisible: false,
 	        },
-		  
+
 		    headerLeft: <TouchableOpacity onPress={() => {navigation.dispatch(NavigationActions.navigate({routeName: 'LoanList'}))}}><Icon containerStyle={{marginLeft: 5, marginTop: 5}} name='arrow-left' type='material-community' color='#fff' size={25}/></TouchableOpacity>,
 		  	headerRight: null
 	});
@@ -67,7 +67,6 @@ class Loandetail extends Component {
 
 const styles = StyleSheet.create({
 	textHeader: {
-		fontFamily: 'open-sans-bold', 
 		color: '#eee',
 		fontWeight: '500',
 		fontSize: 20,
@@ -102,7 +101,7 @@ const styles = StyleSheet.create({
 	},
 
 	leftDetail: {
-		flex: 1, 
+		flex: 1,
 		justifyContent: 'flex-start',
 		padding: 20,
 		borderRightWidth: 0.5,
@@ -111,7 +110,7 @@ const styles = StyleSheet.create({
 	},
 
 	rightDetail: {
-		flex: 3, 
+		flex: 3,
 		justifyContent: 'flex-end',
 		alignSelf: 'center',
 		padding: 20
@@ -128,14 +127,14 @@ const styles = StyleSheet.create({
 	},
 
 	leftAmountDetail:{
-		flex: 1, 
+		flex: 1,
 		justifyContent: 'flex-start',
 		alignSelf: 'center',
 		padding: 20,
 	},
 
 	rightAmountDetail: {
-		flex: 4, 
+		flex: 4,
 		justifyContent: 'flex-start',
 		alignSelf: 'center',
 		padding: 20,
@@ -145,17 +144,14 @@ const styles = StyleSheet.create({
 		color: '#FF9F1C',
 		fontSize: 19,
 		letterSpacing: 0.5,
-		fontFamily: 'open-sans-bold' 
 	},
 
 	loanNature: {
-		fontFamily: 'open-sans',
 		letterSpacing: 1.5,
 		fontSize: 11
 	},
 
 	refNo: {
-		fontFamily: 'open-sans',
 		fontSize: 12,
 		letterSpacing: 1.5
 	}

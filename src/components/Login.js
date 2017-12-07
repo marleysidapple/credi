@@ -126,7 +126,7 @@ export const styles = StyleSheet.create({
 	}
 })
 
-function mapStateToProps(state, props){
+function mapStateToProps(state){
   return {
   	  detail: state.auth_login.detail,
       email: state.auth_login.email,

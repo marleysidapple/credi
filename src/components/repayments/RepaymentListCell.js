@@ -166,7 +166,6 @@ const styles = StyleSheet.create({
   },
 
   loanTitle: {
-    fontFamily: 'open-sans',
     padding: 5,
     marginLeft: 5,
     flex:1,
@@ -174,7 +173,6 @@ const styles = StyleSheet.create({
   },
 
   loanContractNo: {
-      fontFamily: 'open-sans',
       marginLeft: 10,
       fontSize: 10,
       color: "#576068"
@@ -187,7 +185,6 @@ const styles = StyleSheet.create({
   },
 
   amount: {
-    fontFamily: 'open-sans-bold',
     color: "#576068",
     fontSize: 12,
     color: '#25ADE4'
@@ -200,7 +197,6 @@ const styles = StyleSheet.create({
   },
 
   loanStatus: {
-    fontFamily: 'open-sans',
     flex: 2,
     color: '#25ADE4',
     justifyContent: 'center',
@@ -219,13 +215,11 @@ const styles = StyleSheet.create({
   },
 
   person: {
-    fontFamily: 'open-sans',
     flex: 2,
     color: "#576068",
   },
 
   number: {
-    fontFamily: 'open-sans',
     flex: 1,
     color: "#576068",
   }

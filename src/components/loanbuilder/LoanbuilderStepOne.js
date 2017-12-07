@@ -19,7 +19,7 @@ class LoanbuilderStepOne extends Component {
 			navigationOptions: {
 	          tabBarVisible: false,
 	        },
-		  
+
 		    headerLeft: <TouchableOpacity onPress={() => {navigation.dispatch(NavigationActions.navigate({routeName: 'LoanList'}))}}><Icon containerStyle={{marginLeft: 5, marginTop: 5}} name='arrow-left' type='material-community' color='#fff' size={25}/></TouchableOpacity>,
 		  	headerRight: null
 	});
@@ -46,7 +46,6 @@ class LoanbuilderStepOne extends Component {
 
 const styles = StyleSheet.create({
 	textHeader: {
-		fontFamily: 'open-sans-bold', 
 		color: '#eee',
 		fontWeight: '500',
 		fontSize: 20,
@@ -73,7 +72,7 @@ const styles = StyleSheet.create({
 
 	borrower: {
 		alignItems: 'center',
-		justifyContent: 'center',	
+		justifyContent: 'center',
 	},
 
 	lender: {
@@ -83,7 +82,6 @@ const styles = StyleSheet.create({
 	},
 
 	loanTypeStyle: {
-		fontFamily: 'open-sans', 
 		color: '#25ADE4',
 		fontSize: 18,
 		letterSpacing: 5

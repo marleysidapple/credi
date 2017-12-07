@@ -65,7 +65,7 @@ class Repayment extends Component {
                       onPress={this.updateIndex.bind(this)}
                       selectedIndex={this.state.selectedIndex}
                       buttons={buttons}
-                      textStyle={{fontFamily: 'open-sans', fontSize: 11}} />
+                      textStyle={{ fontSize: 11}} />
         {(!this.props.repaymentLoadingStatus) ?
         <ListView
         enableEmptySections
@@ -83,7 +83,7 @@ class Repayment extends Component {
 
 const styles = StyleSheet.create({
   textHeader: {
-		fontFamily: 'open-sans',
+		
 		color: '#eee',
 		fontWeight: '500',
 		fontSize: 20,

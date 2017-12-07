@@ -19,7 +19,7 @@ class Freemium extends Component {
 			navigationOptions: {
 	          tabBarVisible: false,
 	        },
-		  
+
 		    headerLeft: <TouchableOpacity onPress={() => {navigation.dispatch(NavigationActions.navigate({routeName: 'LoanBuilderStepThree'}))}}><Icon containerStyle={{marginLeft: 5, marginTop: 5}} name='arrow-left' type='material-community' color='#fff' size={25}/></TouchableOpacity>,
 		  	headerRight: null
 	});
@@ -36,7 +36,6 @@ class Freemium extends Component {
 
 const styles = StyleSheet.create({
 	textHeader: {
-		fontFamily: 'open-sans-bold', 
 		color: '#eee',
 		fontWeight: '500',
 		fontSize: 20,
@@ -44,7 +43,6 @@ const styles = StyleSheet.create({
 	},
 
 	freeLoanInfo: {
-		fontFamily: 'open-sans', 
 		alignContent: 'center',
 		justifyContent: 'center'
 	}

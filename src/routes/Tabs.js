@@ -49,7 +49,6 @@ const DashboardTabsCollection = TabNavigator({
   initialRouteName: 'Dashboard',
   tabBarOptions: {
     labelStyle: {
-      fontFamily: 'open-sans'
     }
   },
 },

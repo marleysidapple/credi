@@ -64,7 +64,6 @@ function mapStateToProps(state){
 
 const styles = StyleSheet.create({
 	textHeader: {
-		fontFamily: 'open-sans-bold',
 		color: '#eee',
 		fontWeight: '500',
 		fontSize: 20,

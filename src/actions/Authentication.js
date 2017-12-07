@@ -41,6 +41,7 @@ export async function validateLoginCredential(user){
 			try {
 				  AsyncStorage.setItem('@auth:loginToken', user.data.loginToken);
 				} catch (error) {
+					console.log(error);
 				  //show an error message
 				  // Error saving data
 				}

@@ -26,7 +26,7 @@ class LoanbuilderStepTwo extends Component {
 			navigationOptions: {
 	          tabBarVisible: false,
 	        },
-		  
+
 		    headerLeft: <TouchableOpacity onPress={() => {navigation.dispatch(NavigationActions.navigate({routeName: 'LoanBuilderStepOne'}))}}><Icon containerStyle={{marginLeft: 5, marginTop: 5}} name='arrow-left' type='material-community' color='#fff' size={25}/></TouchableOpacity>,
 		  	headerRight: null
 	});
@@ -39,19 +39,19 @@ class LoanbuilderStepTwo extends Component {
 		return(
 			<ScrollView contentContainerStyle={ CARD_STYLE }>
 				<View style={styles.formGroup}>
-					<FormLabel labelStyle={styles.formLabelStyle} fontFamily={'open-sans'}>Title</FormLabel>
+					<FormLabel labelStyle={styles.formLabelStyle}>Title</FormLabel>
 					<FormInput containerStyle={styles.inputContainerStyle}  inputStyle={styles.inputStyle}  placeholder={'Give it a friendly title'} returnKeyType={'next'} onSubmitEditing={()=>Keyboard.dismiss()}/>
 				</View>
 				<Divider style={styles.divider} />
 
 				<View style={styles.formGroup}>
-					<FormLabel labelStyle={styles.formLabelStyle} fontFamily={'open-sans'}>Total Loan Amount</FormLabel>
+					<FormLabel labelStyle={styles.formLabelStyle}>Total Loan Amount</FormLabel>
 					<FormInput containerStyle={styles.inputContainerStyle}  inputStyle={styles.inputStyle} keyboardType={'numeric'} placeholder={'$200'} returnKeyType={'next'} onSubmitEditing={()=>Keyboard.dismiss()}/>
 				</View>
 				<Divider style={styles.divider} />
 
 				<View style={styles.formGroup}>
-					<FormLabel labelStyle={styles.formLabelStyle} fontFamily={'open-sans'}>Description</FormLabel>
+					<FormLabel labelStyle={styles.formLabelStyle}>Description</FormLabel>
 					<FormInput containerStyle={styles.inputContainerStyle}  inputStyle={styles.inputStyle}  placeholder={'Loan Description'} onSubmitEditing={()=>Keyboard.dismiss()}  returnKeyType={'next'} />
 				</View>
 				<Divider style={styles.divider} />
@@ -79,7 +79,6 @@ class LoanbuilderStepTwo extends Component {
 					          	borderWidth: 0,
 					          },
 					          placeholderText: {
-					          	fontFamily: 'open-sans'
 					          }
 					        }}
 					        onDateChange={(date) => {this.setState({date: date})}}
@@ -90,7 +89,6 @@ class LoanbuilderStepTwo extends Component {
 
 				<View style={styles.stepAction}>
 					<Button
-					  fontFamily='open-sans'
 					  backgroundColor= '#25ADE4'
 					  onPress={() => this.props.navigation.navigate('Freemium')}
 					  raised
@@ -106,9 +104,8 @@ class LoanbuilderStepTwo extends Component {
 
 
 const styles = StyleSheet.create({
-	
+
 	textHeader: {
-		fontFamily: 'open-sans-bold', 
 		color: '#eee',
 		fontWeight: '500',
 		fontSize: 20,
@@ -136,7 +133,6 @@ const styles = StyleSheet.create({
 	},
 
 	inputStyle: {
-		fontFamily: 'open-sans',
 		alignItems: 'flex-start',
 		fontSize: 14,
 		color: '#333333'
@@ -155,7 +151,7 @@ const styles = StyleSheet.create({
 	stepAction: {
 		padding: 10,
 		flex: 1,
-		
+
 	},
 
 });

@@ -19,7 +19,7 @@ class Index extends Component {
 						<Button
 						  onPress={() => this.props.navigation.navigate('Login')}
 						  buttonStyle={{backgroundColor: '#86C15D', borderRadius: 2}}
-						  textStyle={{textAlign: 'center', fontFamily: 'open-sans'}}
+						  textStyle={{textAlign: 'center'}}
 						  title={`Get Started`}
 						/>
 					</TouchableOpacity>
@@ -30,7 +30,6 @@ class Index extends Component {
 
 const styles = StyleSheet.create({
   main: {
-   fontFamily: 'open-sans',
    marginTop: 5,
    color: '#fff'
   },

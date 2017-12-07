@@ -24,7 +24,7 @@ class LoanBuilderStepThree extends Component {
 			navigationOptions: {
 	          tabBarVisible: false,
 	        },
-		  
+
 		    headerLeft: <TouchableOpacity onPress={() => {navigation.dispatch(NavigationActions.navigate({routeName: 'LoanBuilderStepTwo'}))}}><Icon containerStyle={{marginLeft: 5, marginTop: 5}} name='arrow-left' type='material-community' color='#fff' size={25}/></TouchableOpacity>,
 		  	headerRight: null
 	});
@@ -68,24 +68,24 @@ class LoanBuilderStepThree extends Component {
 	                    supportedOrientations={['portrait']}
 	                    onChange={(option)=>{ this.setState({textInputValue:option.label})}} >
 						<View style={styles.formGroup}>
-							<FormLabel labelStyle={styles.formLabelStyle} fontFamily={'open-sans'}>Interest Type</FormLabel>
+							<FormLabel labelStyle={styles.formLabelStyle}>Interest Type</FormLabel>
 							<FormInput containerStyle={styles.inputContainerStyle}  inputStyle={styles.inputStyle}  placeholder={'Choose Interest Type'} value={''} returnKeyType={'next'}  onSubmitEditing={()=>Keyboard.dismiss()}/>
 						</View>
 					</ModalSelector>
 				</View>
-				
+
 				<Divider style={styles.divider} />
 
 				<View style={styles.formGroup}>
-					<FormLabel labelStyle={styles.formLabelStyle} fontFamily={'open-sans'}>Annual Interest(%)</FormLabel>
+					<FormLabel labelStyle={styles.formLabelStyle}>Annual Interest(%)</FormLabel>
 					<FormInput containerStyle={styles.inputContainerStyle}  inputStyle={styles.inputStyle}  placeholder={'e.g 5%'} returnKeyType={'next'} keyboardType={'numeric'} onSubmitEditing={()=>Keyboard.dismiss()}/>
 				</View>
 				<Divider style={styles.divider} />
-				
+
 				<View style={styles.formGroup}>
-					<FormLabel labelStyle={styles.formLabelStyle} fontFamily={'open-sans'}>Loan Term</FormLabel>
-					<FormInput containerStyle={styles.inputContainerStyleForTerm}  inputStyle={styles.inputStyle}  placeholder={'e.g. 1 year'} returnKeyType={'next'} keyboardType={'numeric'} onSubmitEditing={()=>Keyboard.dismiss()}/>	
-					
+					<FormLabel labelStyle={styles.formLabelStyle}>Loan Term</FormLabel>
+					<FormInput containerStyle={styles.inputContainerStyleForTerm}  inputStyle={styles.inputStyle}  placeholder={'e.g. 1 year'} returnKeyType={'next'} keyboardType={'numeric'} onSubmitEditing={()=>Keyboard.dismiss()}/>
+
 					<ModalSelector
 		                    data={duration}
 		                    style={styles.modalStyle}
@@ -122,7 +122,6 @@ class LoanBuilderStepThree extends Component {
 					          	borderWidth: 0,
 					          },
 					          placeholderText: {
-					          	fontFamily: 'open-sans'
 					          }
 					        }}
 					        onDateChange={(date) => {this.setState({date: date})}}
@@ -140,7 +139,7 @@ class LoanBuilderStepThree extends Component {
 	                    supportedOrientations={['portrait']}
 	                    onChange={(option)=>{ this.setState({textInputValue:option.label})}} >
 						<View style={styles.formGroup}>
-							<FormLabel labelStyle={styles.formLabelStyle} fontFamily={'open-sans'}>Frequency</FormLabel>
+							<FormLabel labelStyle={styles.formLabelStyle}>Frequency</FormLabel>
 							<FormInput containerStyle={styles.inputContainerStyle}  inputStyle={styles.inputStyle}  placeholder={'Choose Repayment Frequency'} value={''} returnKeyType={'next'}  onSubmitEditing={()=>Keyboard.dismiss()}/>
 						</View>
 					</ModalSelector>
@@ -149,7 +148,6 @@ class LoanBuilderStepThree extends Component {
 
 				<View style={styles.stepAction}>
 					<Button
-					  fontFamily='open-sans'
 					  backgroundColor= '#25ADE4'
 					  onPress={() => this.props.navigation.navigate('LoanBuilderStepFour')}
 					  raised
@@ -163,7 +161,7 @@ class LoanBuilderStepThree extends Component {
 
 
 const styles = StyleSheet.create({
-	
+
 	cardStyle: {
 		borderWidth: 0,
 		margin: 4,
@@ -171,11 +169,10 @@ const styles = StyleSheet.create({
 		backgroundColor:'#fff',
 		elevation: 5,
 		flex: 1
-  
+
 	},
 
 	textHeader: {
-		fontFamily: 'open-sans-bold', 
 		color: '#eee',
 		fontWeight: '500',
 		fontSize: 20,
@@ -202,7 +199,7 @@ const styles = StyleSheet.create({
 		borderBottomWidth: 0,
 		marginTop: 8,
 		marginLeft: 10
-		
+
 	},
 
 	formLabelStyle: {
@@ -228,7 +225,6 @@ const styles = StyleSheet.create({
 	},
 
 	inputStyle: {
-		fontFamily: 'open-sans',
 		fontSize: 14,
 		color: '#333333',
 	},
@@ -240,11 +236,10 @@ const styles = StyleSheet.create({
 	},
 
 	selectStyle: {
-		fontFamily: 'open-sans', 
 		letterSpacing: 1
 	},
 
-	
+
 
 });
 

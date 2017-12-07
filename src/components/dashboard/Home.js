@@ -27,7 +27,6 @@ class Home extends Component {
 
 const styles = StyleSheet.create({
 	textHeader: {
-		fontFamily: 'open-sans-bold',
 		color: '#eee',
 		fontWeight: '500',
 		fontSize: 20,

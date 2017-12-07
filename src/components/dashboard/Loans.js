@@ -16,11 +16,11 @@ class Loans extends Component {
 		super(props);
 	}
 
-	
+
 	async componentWillMount(){
 		this.props.fetchAvailableLoans(this.props.token);
 		this.createDataSource(this.props);
-	
+
 		try {
 			  const token = await AsyncStorage.getItem('@auth:loginToken');
 			  if (token !== null){
@@ -29,7 +29,7 @@ class Loans extends Component {
 			} catch (error) {
 			  // Error retrieving data
 			}
-	
+
 	}
 
 	componentWillReceiveProps(nextProps){
@@ -40,9 +40,9 @@ class Loans extends Component {
 		 const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
 		 this.dataSource = ds.cloneWithRows(props.loanList);
 	}
-	
 
-	
+
+
 	 static navigationOptions = ({ navigation }) => ({
 		    title: <Text style={styles.textHeader}>MY LOANS</Text>,
 		    headerStyle : {
@@ -53,13 +53,13 @@ class Loans extends Component {
 		  	headerRight: <Icon name='plus' style={styles.addLoan} type='material-community' color='#fff'  onPress={() => navigation.navigate('LoanBuilderStepOne')} />
 	});
 
-	
-	
+
+
 	render(){
 		const buttons = ['Borrowed', 'Lent', 'Pending', 'Draft', 'Live'];
 		return(
 			<View>
-				<ButtonGroup buttons={buttons} containerStyle={this.buttonGroupStyle} textStyle={{fontFamily: 'open-sans', fontSize: 10}} />
+				<ButtonGroup buttons={buttons} containerStyle={this.buttonGroupStyle} textStyle={{ fontSize: 10}} />
 				{/*<SearchBar round containerStyle={styles.searchContainerStyle} inputStyle={styles.inputContainerStyle} placeholder='Search Loans..' />*/}
 				{
 					(!this.props.loading) ?
@@ -67,13 +67,13 @@ class Loans extends Component {
 					: <ActivityIndicator size={'small'} />
 				}
 			</View>
-		);	
-	}	
+		);
+	}
 }
 
 
 const styles = StyleSheet.create({
-	
+
 
 	searchContainerStyle: {
 		backgroundColor: 'transparent',
@@ -94,7 +94,6 @@ const styles = StyleSheet.create({
 	},
 
 	textHeader: {
-		fontFamily: 'open-sans-bold', 
 		color: '#eee',
 		fontWeight: '500',
 		fontSize: 20,
@@ -106,7 +105,7 @@ const styles = StyleSheet.create({
 	},
 
 	detail: {
-		
+
 	}
 
 });
