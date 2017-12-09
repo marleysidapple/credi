@@ -62,11 +62,12 @@ const styles = StyleSheet.create({
 
 	description: {
 		padding: 15,
-    flex: 1
+    flex: 1,
 	},
 
 	alertText: {
 		color: "#576068",
+		fontFamily: 'Lato'
 	},
 
 	alertInterval: {
@@ -77,7 +78,8 @@ const styles = StyleSheet.create({
 
 	alertTime: {
 		color: "#576068",
-		fontSize: 11
+		fontSize: 11,
+		fontFamily: 'Lato'
 	}
 });
 

@@ -66,7 +66,7 @@ class Repayment extends Component {
                       selectedIndex={this.state.selectedIndex}
                       buttons={buttons}
                       containerStyle={styles.buttonContainer}
-                      textStyle={{ fontSize: 11, fontFamily: 'Lato'}} />
+                      textStyle={{ fontSize: 11, fontFamily: 'Lato', fontWeight: 'normal'}} />
         {(!this.props.repaymentLoadingStatus) ?
         <ListView
         enableEmptySections
