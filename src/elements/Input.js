@@ -46,7 +46,8 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 14,
     margin: 10,
-    height: 35
+    height: 35,
+		fontFamily: 'Lato'
   },
 
   singleInputWrapper: {

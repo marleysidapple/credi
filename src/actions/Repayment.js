@@ -27,7 +27,7 @@ export function fetchAllRepayments(loginToken, client_guid){
 			});
 		}).catch(err => {
 			// some err
-			console.log(err);
+			console.log(err.response);
 		});
 	}
 }

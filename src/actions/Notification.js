@@ -24,7 +24,7 @@ export function fetchAllNotification(loginToken){
 			});
 		}).catch(err => {
 			// some err
-			console.log(err);
+			console.log(err.response);
 		});
 	}
 }

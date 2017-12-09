@@ -89,12 +89,12 @@ export const styles = StyleSheet.create({
 	loginWrapper: {
 		flex: 1,
 		justifyContent: 'center',
-		backgroundColor: '#3EA7D9'
+		backgroundColor: '#469CB0',
 	},
 
 	registerInfo: {
-		color: '#fff'
-
+		color: '#fff',
+		fontFamily: 'lato',
 	},
 
 	linkToRegister: {
@@ -121,6 +121,8 @@ export const styles = StyleSheet.create({
 	},
 
 	loginBtnTextStyle: {
+		fontFamily: 'Lato',
+		fontWeight: 'bold',
 		textAlign: 'center',
 		color: '#3EA7D9',
 	}
