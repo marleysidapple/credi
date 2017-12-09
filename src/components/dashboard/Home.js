@@ -30,7 +30,8 @@ const styles = StyleSheet.create({
 		color: '#eee',
 		fontWeight: '500',
 		fontSize: 20,
-		letterSpacing: 3
+		letterSpacing: 3,
+    fontFamily: "Lato"
 	},
 
 	notificationWrapper:{

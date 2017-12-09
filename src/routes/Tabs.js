@@ -48,7 +48,10 @@ const DashboardTabsCollection = TabNavigator({
   lazy: true,
   initialRouteName: 'Dashboard',
   tabBarOptions: {
+    activeTintColor: '#469CB0',
     labelStyle: {
+      fontFamily: 'Lato',
+      color: '#646768'
     }
   },
 },

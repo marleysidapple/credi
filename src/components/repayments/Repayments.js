@@ -44,7 +44,7 @@ class Repayment extends Component {
   static navigationOptions = ({ navigation }) => ({
         title: <Text style={styles.textHeader}>REPAYMENTS</Text>,
         headerStyle : {
-          backgroundColor: "#25ADE4",
+          backgroundColor: "#469CB0",
           height: 90,
         },
       navigationOptions: {
@@ -61,11 +61,12 @@ class Repayment extends Component {
    const buttons = ['All', 'Payments In', 'Payments Out'];
    return(
       <ScrollView style={styles.repaymentWrapper}>
-        <ButtonGroup  selectedBackgroundColor="#25ADE4"
+        <ButtonGroup  selectedBackgroundColor="#d6dadb"
                       onPress={this.updateIndex.bind(this)}
                       selectedIndex={this.state.selectedIndex}
                       buttons={buttons}
-                      textStyle={{ fontSize: 11}} />
+                      containerStyle={styles.buttonContainer}
+                      textStyle={{ fontSize: 11, fontFamily: 'Lato'}} />
         {(!this.props.repaymentLoadingStatus) ?
         <ListView
         enableEmptySections
@@ -83,12 +84,16 @@ class Repayment extends Component {
 
 const styles = StyleSheet.create({
   textHeader: {
-		
+		fontFamily: 'Lato',
 		color: '#eee',
 		fontWeight: '500',
 		fontSize: 20,
 		letterSpacing: 4
 	},
+
+  buttonContainer: {
+    height: 30
+  },
 
   repaymentWrapper: {
     flex: 1,

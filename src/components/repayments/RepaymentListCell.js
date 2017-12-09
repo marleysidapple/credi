@@ -117,8 +117,8 @@ class RepaymentListCell extends Component {
           <View style={styles.additionalInfo}>
               <Text style={styles.person}>
               {(repayment.payments_in) ?
-                <Text>From: {repayment.borrower_name}</Text>
-                :<Text>To: {repayment.lender_name}</Text>
+                <Text style={{fontFamily: 'Lato'}}>From: {repayment.borrower_name}</Text>
+                :<Text style={{fontFamily: 'Lato'}}>To: {repayment.lender_name}</Text>
               }
               </Text>
               <Text style={styles.number}>{repayment.loan_number}</Text>
@@ -143,6 +143,13 @@ const styles = StyleSheet.create({
     borderWidth: 0,
     marginTop: 5,
     justifyContent: "center",
+    shadowColor: '#8f9393',
+    shadowOffset: {
+       width: 0,
+       height: 0.3
+     },
+     shadowRadius: 3,
+     shadowOpacity: 0.8
   },
 
   repaymentContent: {
@@ -170,12 +177,14 @@ const styles = StyleSheet.create({
     marginLeft: 5,
     flex:1,
     color: "#576068",
+    fontFamily: 'Lato'
   },
 
   loanContractNo: {
       marginLeft: 10,
       fontSize: 10,
-      color: "#576068"
+      color: "#576068",
+      fontFamily: 'Lato'
   },
 
   repaymentAmount: {
@@ -187,13 +196,14 @@ const styles = StyleSheet.create({
   amount: {
     color: "#576068",
     fontSize: 12,
-    color: '#25ADE4'
+    color: '#25ADE4',
+    fontFamily: 'Lato'
   },
 
   description: {
     flexDirection: 'row',
     flex: 1,
-    alignItems: 'center'
+    alignItems: 'center',
   },
 
   loanStatus: {
@@ -201,9 +211,8 @@ const styles = StyleSheet.create({
     color: '#25ADE4',
     justifyContent: 'center',
     fontSize: 11,
-
+    fontFamily: 'Lato'
   },
-
 
   additionalInfo: {
     flexDirection: 'row',
@@ -217,11 +226,15 @@ const styles = StyleSheet.create({
   person: {
     flex: 2,
     color: "#576068",
+    fontFamily: 'Lato'
   },
 
   number: {
     flex: 1,
     color: "#576068",
+    fontFamily: 'Lato',
+    fontSize: 12,
+    marginLeft: 50
   }
 
 });
