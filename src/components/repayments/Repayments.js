@@ -60,13 +60,14 @@ class Repayment extends Component {
  render(){
    const buttons = ['All', 'Payments In', 'Payments Out'];
    return(
+     <View style={{flex: 1, backgroundColor: '#F9F8FD'}}>
+     <ButtonGroup  selectedBackgroundColor="#d6dadb"
+                   onPress={this.updateIndex.bind(this)}
+                   selectedIndex={this.state.selectedIndex}
+                   buttons={buttons}
+                   containerStyle={styles.buttonContainer}
+                   textStyle={{ fontSize: 11, fontFamily: 'Lato', fontWeight: 'normal'}} />
       <ScrollView style={styles.repaymentWrapper}>
-        <ButtonGroup  selectedBackgroundColor="#d6dadb"
-                      onPress={this.updateIndex.bind(this)}
-                      selectedIndex={this.state.selectedIndex}
-                      buttons={buttons}
-                      containerStyle={styles.buttonContainer}
-                      textStyle={{ fontSize: 11, fontFamily: 'Lato', fontWeight: 'normal'}} />
         {(!this.props.repaymentLoadingStatus) ?
         <ListView
         enableEmptySections
@@ -76,6 +77,7 @@ class Repayment extends Component {
         />
         : <ActivityIndicator size={'small'} />}
       </ScrollView>
+      </View>
    );
  }
 
