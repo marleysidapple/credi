@@ -92,36 +92,47 @@ class RepaymentListCell extends Component {
   render(){
     const {repayment}  = this.props;
     return(
-      <TouchableOpacity style={styles.repaymentCell} key={repayment.guid} onPress={() => this.showActionSheet(repayment, repayment.myactions)}>
-          <View style={styles.repaymentContent}>
-            <View style={styles.imageWrapper}>
-              <Image source={require('./../../../assets/images/repayment.png')} style={styles.repaymentIcon}  resizeMode={'contain'} />
-            </View>
+      <TouchableOpacity style={styles.repaymentCellWrapper} key={repayment.guid} onPress={() => this.showActionSheet(repayment, repayment.myactions)}>
+          <View style={styles.singleCellwrapper}>
 
-
-            <View style={styles.loanDescription}>
-                  <View style={styles.description}>
-                      <Text style={styles.loanTitle} numberOfLines={1}>{repayment.loan_alias}</Text>
-                          <Badge containerStyle={{ backgroundColor: '#FAFAFB', height: 20, justifyContent: 'center', alignItems: 'center'}} textStyle={styles.loanStatus}>
-                            <Text style={styles.loanStatus}>{repayment.status_name}</Text>
-                          </Badge>
+              <View style={{flex: 1, flexDirection: 'row' }}>
+                  <View style={styles.imageWrapper}>
+                    <Image source={require('./../../../assets/images/payment.png')} style={{width: 70, height: 70}} resizeMode={'contain'} />
                   </View>
-                  <Text style={styles.loanContractNo}>Date Due: {repayment.scheduled_date}</Text>
-            </View>
+                  <View style={styles.repaymentDescriptionWrapper}>
+                      <View style={styles.headingWrapper}>
+                        <Text style={styles.headingTitle} numberOfLines={1}>{repayment.loan_alias}</Text>
+                      </View>
 
-            <View style={styles.repaymentAmount}>
-                    <Text style={styles.amount}>{repayment.currency_code} {repayment.currency_symbol}{repayment.repayment_amount}</Text>
-            </View>
-          </View>
 
-          <View style={styles.additionalInfo}>
-              <Text style={styles.person}>
-              {(repayment.payments_in) ?
-                <Text style={{fontFamily: 'Lato'}}>From: {repayment.borrower_name}</Text>
-                :<Text style={{fontFamily: 'Lato'}}>To: {repayment.lender_name}</Text>
-              }
-              </Text>
-              <Text style={styles.number}>{repayment.loan_number}</Text>
+                      <View style={styles.titleWrapper}>
+                        <Text style={styles.subheadingTitle}>{repayment.loan_number}</Text>
+                      </View>
+
+                      <View style={styles.priceWrapper}>
+                        <Text style={styles.priceTitle}>{repayment.currency_code} {repayment.currency_symbol}{repayment.repayment_amount}</Text>
+                      </View>
+                  </View>
+              </View>
+
+              <View style={styles.optionWrapper}>
+
+                    <View style={styles.thirdOptionWrapper}>
+                      <Icon name='ellipsis-h' type='font-awesome' color='#ACB9C8' size={18}/>
+                      <Text style={styles.action}>{repayment.status_name}</Text>
+                    </View>
+                    <View style={styles.firstOptionWrapper}>
+                        <Icon name='calendar' type='font-awesome' color='#ACB9C8' size={18}/>
+                        <Text style={styles.date}>{repayment.scheduled_date}</Text>
+                    </View>
+                    <View style={styles.secondOptionWrapper}>
+                    <Icon name='send-o' type='font-awesome' color='#ACB9C8' size={18}/>
+                      {(repayment.payments_in) ?
+                        <Text style={styles.person}>{repayment.borrower_name}</Text>
+                        :<Text style={styles.person}>{repayment.lender_name}</Text>
+                      }
+                    </View>
+              </View>
           </View>
       </TouchableOpacity>
     )
@@ -129,116 +140,138 @@ class RepaymentListCell extends Component {
 }
 
 const styles = StyleSheet.create({
-  repaymentWrapper: {
+  repaymentCellWrapper: {
     flex: 1,
-    backgroundColor: "white"
+    backgroundColor: '#F9F8FD',
+    padding: 13,
   },
 
-  repaymentCell: {
-    marginLeft: 11,
-    marginRight: 11,
-    height: 110,
-    backgroundColor: "#EBEDF0",
-    flex: 1,
+  singleCellwrapper: {
+    padding: 10,
     borderWidth: 0,
-    marginTop: 5,
-    justifyContent: "center",
-    shadowColor: '#8f9393',
+    height: 150,
+    backgroundColor: '#fff',
+    borderRadius: 8,
+    shadowColor: '#c9cbcc',
     shadowOffset: {
        width: 0,
-       height: 0.3
+       height: 0.2,
      },
      shadowRadius: 3,
-     shadowOpacity: 0.8
-  },
-
-  repaymentContent: {
-    flex: 1,
-    flexDirection: 'row',
-    padding: 15,
+     shadowOpacity: 0.4
   },
 
   imageWrapper: {
-    flexDirection: "row",
-    alignItems: "center"
-  },
-
-  repaymentIcon: {
-    width: 40,
-    height: 40
-  },
-
-  loanDescription: {
-      flex: 3,
-  },
-
-  loanTitle: {
-    padding: 5,
-    marginLeft: 5,
-    flex:1,
-    color: "#576068",
-    fontFamily: 'Lato'
-  },
-
-  loanContractNo: {
-      marginLeft: 10,
-      fontSize: 10,
-      color: "#576068",
-      fontFamily: 'Lato'
-  },
-
-  repaymentAmount: {
-    flex: 2,
-    alignItems: "flex-end",
-    justifyContent: "center",
-  },
-
-  amount: {
-    color: "#576068",
-    fontSize: 12,
-    color: '#25ADE4',
-    fontFamily: 'Lato'
-  },
-
-  description: {
-    flexDirection: 'row',
-    flex: 1,
-    alignItems: 'center',
-  },
-
-  loanStatus: {
-    flex: 2,
-    color: '#25ADE4',
+    width: 90,
+    height: 92,
     justifyContent: 'center',
-    fontSize: 11,
-    fontFamily: 'Lato'
+    alignSelf: 'center',
   },
 
-  additionalInfo: {
-    flexDirection: 'row',
+  repaymentDescriptionWrapper: {
     flex: 1,
-    borderTopWidth: 0.5,
-    alignItems: 'center',
-    paddingLeft: 15,
-    borderTopColor: "#d1d5da",
+    height: 90,
+  },
+
+  headingWrapper: {
+  //  backgroundColor: 'yellow',
+    height: 30,
+  },
+
+  headingTitle: {
+    padding: 5,
+    fontSize: 18,
+    fontFamily: 'Lato',
+    color: '#59748E',
+  },
+
+  titleWrapper: {
+  //  backgroundColor: 'red',
+    height: 30,
+  },
+
+  subheadingTitle: {
+    padding: 5,
+    fontFamily: 'Lato',
+    fontSize: 14,
+    color: '#96A2B4'
+  },
+
+  priceTitle: {
+    padding: 5,
+    fontFamily: 'Lato',
+    fontSize: 18,
+    color: '#FFC863',
+    fontWeight: 'bold'
+  },
+
+  priceWrapper: {
+  //  backgroundColor: 'orange',
+    height: 30,
+  },
+
+  optionWrapper: {
+      flexDirection: 'row',
+      marginLeft: -10,
+      marginRight: -10,
+      height: 35,
+      borderTopWidth: 2,
+      borderTopColor: '#F7F8FD',
+      justifyContent: 'center',
+      alignItems: 'center'
+
+  },
+
+  firstOptionWrapper: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    borderRightWidth: 2,
+    borderRightColor: '#F7F8FD',
+    alignSelf: 'center'
+  },
+
+  secondOptionWrapper: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignSelf: 'center'
+  },
+
+  thirdOptionWrapper: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignSelf: 'center',
+    borderRightWidth: 2,
+    borderRightColor: '#F7F8FD',
+  },
+
+  date:{
+    marginLeft: 5,
+    marginRight: 5,
+    fontFamily: 'Lato',
+    fontSize: 13,
+    color: '#96A2B4',
   },
 
   person: {
-    flex: 2,
-    color: "#576068",
-    fontFamily: 'Lato'
+    marginLeft: 5,
+    marginRight: 5,
+    fontFamily: 'Lato',
+    fontSize: 13,
+    color: '#96A2B4',
   },
 
-  number: {
-    flex: 1,
-    color: "#576068",
+  action: {
+    marginLeft: 5,
+    marginRight: 5,
     fontFamily: 'Lato',
-    fontSize: 12,
-    marginLeft: 50
+    fontSize: 13,
+    color: '#96A2B4',
   }
 
 });
-
 
 function mapStateToProps(state){
   return{

@@ -20,6 +20,7 @@ export const Router = StackNavigator({
       	}
       },
 
+
       Login: {
       	screen: Login,
       	navigationOptions: {
@@ -42,7 +43,6 @@ export const Router = StackNavigator({
 {
   stateName: 'MainAppNav',
   initialRouteName: 'Landing',
-  //initialRouteName: 'Dashboard',
   lazyLoad: true,
   animationEnabled: false,
 });

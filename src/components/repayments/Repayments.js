@@ -92,12 +92,12 @@ const styles = StyleSheet.create({
 	},
 
   buttonContainer: {
-    height: 30
+    height: 30,
   },
 
   repaymentWrapper: {
     flex: 1,
-    backgroundColor: "white"
+    backgroundColor: '#F9F8FD',
   },
 
 });
