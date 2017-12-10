@@ -4,6 +4,7 @@ import { Text, View, Button } from 'react-native';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import Index from './../Index';
+import Test from './../Test';
 import Login from './../components/Login';
 import Register from './../components/Register';
 
@@ -15,6 +16,13 @@ import DashboardTabsCollection from './Tabs';
 export const Router = StackNavigator({
       Landing: {
       	screen: Index,
+      	navigationOptions: {
+      		header: null,
+      	}
+      },
+
+      Test: {
+      	screen: Test,
       	navigationOptions: {
       		header: null,
       	}

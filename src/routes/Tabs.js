@@ -18,6 +18,7 @@ const DashboardTabsCollection = TabNavigator({
     screen: Home,
     navigationOptions: {
     	tabBarIcon: ({ tintColor }) => <Icon name="tachometer" type="font-awesome"  size={25} color={tintColor} />,
+      header: null
     }
   },
   Repayments: {
