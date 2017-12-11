@@ -36,7 +36,9 @@ class Home extends Component {
          </View>
 
          <View style={styles.bottomSectionWrapper}>
-
+            <View style={styles.sectionDetail}>
+              <Text style={styles.descriptionTitle}>Your Loans</Text>
+            </View>
          </View>
       </View>
     );
@@ -141,7 +143,13 @@ const styles = StyleSheet.create({
     letterSpacing: 1,
     color: '#FFC863',
     fontWeight: 'bold'
-  }
+  },
+
+  sectionDetail: {
+    paddingLeft: 30,
+    paddingTop: 10
+  },
+
 });
 
 export default Home;
